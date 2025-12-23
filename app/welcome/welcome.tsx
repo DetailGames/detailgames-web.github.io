@@ -3,7 +3,7 @@ export function Welcome() {
     <div className="min-h-screen bg-black text-white flex flex-col overflow-hidden">
       {/* Main Content Area */}
       <main className="flex-1 flex items-center justify-center px-4 py-16">
-        <div className="w-full max-w-7xl mx-auto">
+        <div className="w-full max-w-8xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
             {/* Left/Right Content Areas (for larger screens) */}
             <div className="hidden lg:flex flex-col items-center justify-center flex-1 min-w-0 animate-fade-in-left">
