@@ -206,7 +206,7 @@ const resources = [
 ];
 function meta({}) {
   return [{
-    title: "New React Router App"
+    title: "New React Router App@@@"
   }, {
     name: "description",
     content: "Welcome to React Router!"
@@ -220,7 +220,7 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: home,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/assets/entry.client-wMV1gpTa.js", "imports": ["/assets/chunk-WWGJGFF6-DaTaPSdi.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/assets/root-B006P7sv.js", "imports": ["/assets/chunk-WWGJGFF6-DaTaPSdi.js"], "css": ["/assets/root-BrAzMOzt.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/assets/home-DpPAqPVa.js", "imports": ["/assets/chunk-WWGJGFF6-DaTaPSdi.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/assets/manifest-e07294c0.js", "version": "e07294c0", "sri": void 0 };
+const serverManifest = { "entry": { "module": "/assets/entry.client-wMV1gpTa.js", "imports": ["/assets/chunk-WWGJGFF6-DaTaPSdi.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/assets/root-B006P7sv.js", "imports": ["/assets/chunk-WWGJGFF6-DaTaPSdi.js"], "css": ["/assets/root-BrAzMOzt.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/assets/home-sfqn30kV.js", "imports": ["/assets/chunk-WWGJGFF6-DaTaPSdi.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/assets/manifest-f7d1c7cb.js", "version": "f7d1c7cb", "sri": void 0 };
 const assetsBuildDirectory = "build\\client";
 const basename = "/";
 const future = { "unstable_optimizeDeps": false, "unstable_subResourceIntegrity": false, "v8_middleware": false, "v8_splitRouteModules": false, "v8_viteEnvironmentApi": false };
