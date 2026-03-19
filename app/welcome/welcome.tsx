@@ -1,8 +1,29 @@
+import { useState, useEffect } from "react";
+
+const CONTACT_LABEL_KO = "게임이용 문의";
+const CONTACT_LABEL_EN = "Game Inquiry";
+const REFUND_CONTACT_LABEL_KO = "결제관련 문의";
+const REFUND_CONTACT_LABEL_EN = "Payment Inquiry";
+
 export function Welcome() {
+  const [contactLabel, setContactLabel] = useState(CONTACT_LABEL_EN);
+  const [refundContactLabel, setRefundContactLabel] = useState(
+    REFUND_CONTACT_LABEL_EN,
+  );
+
+  useEffect(() => {
+    const lang = typeof navigator !== "undefined" ? navigator.language : "";
+    const isKo = lang.startsWith("ko");
+    setContactLabel(isKo ? CONTACT_LABEL_KO : CONTACT_LABEL_EN);
+    setRefundContactLabel(
+      isKo ? REFUND_CONTACT_LABEL_KO : REFUND_CONTACT_LABEL_EN,
+    );
+  }, []);
+
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col overflow-hidden">
+    <div className="min-h-screen lg:h-screen bg-black text-white flex flex-col overflow-y-auto lg:overflow-hidden">
       {/* Main Content Area */}
-      <main className="flex-1 flex items-center justify-center px-4 py-16">
+      <main className="flex-1 min-h-0 flex items-center justify-center px-4 py-8 lg:py-8">
         <div className="w-full max-w-8xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
             {/* Left/Right Content Areas (for larger screens) */}
@@ -26,15 +47,33 @@ export function Welcome() {
               </div>
             </div>
 
-            {/* Center: GIF Image */}
-            <div className="shrink-0 w-full max-w-2xl animate-fade-in-up">
-              <div className="relative group">
+            {/* Center: GIF Image + 고객센터 문의 */}
+            <div className="shrink-0 w-full max-w-2xl animate-fade-in-up flex flex-col items-center gap-12">
+              <div className="relative group w-full">
                 <div className="absolute -inset-1 bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
                 <img
                   src="/detailgames_intro.gif"
                   alt="Detailgames Introduction"
                   className="relative w-full h-auto rounded-lg shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-300"
                 />
+              </div>
+              <div className="flex flex-col sm:flex-row items-center gap-3 animate-fade-in">
+                <a
+                  href="https://forms.gle/oCdZoKNty42wkUE28"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-600/50 bg-gray-800/50 hover:bg-gray-700/50 hover:border-gray-500 text-gray-200 font-medium text-sm transition-colors duration-200"
+                >
+                  {contactLabel}
+                </a>
+                <a
+                  href="https://forms.gle/T3HmNCd79GexQnsC7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-600/50 bg-gray-800/50 hover:bg-gray-700/50 hover:border-gray-500 text-gray-200 font-medium text-sm transition-colors duration-200"
+                >
+                  {refundContactLabel}
+                </a>
               </div>
             </div>
 
@@ -104,7 +143,7 @@ export function Welcome() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full py-10 px-4 border-t border-gray-800/50">
+      <footer className="shrink-0 w-full py-6 px-4 border-t border-gray-800/50">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center justify-center gap-3 text-center animate-fade-in">
             <div className="text-gray-300 text-sm font-medium">
